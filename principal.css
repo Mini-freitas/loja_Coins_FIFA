@@ -1,0 +1,1279 @@
+/******** area de import de fontes *********/
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=League+Spartan:wght@100..900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/******** variaveis da pagina principal *********/
+
+:root
+{
+    /******** cores do body *********/
+
+    --cor-preto:rgb(0, 0, 0);
+    --cor-verde_cana:rgb(99, 248, 0);
+    --cor-cinza:rgb(167, 167, 167);
+    --cor-branca:rgb(255, 241, 241);
+    --cor-cinza-escuro:rgb(83, 83, 83);
+
+}
+:root
+{
+    /******** fonte do header *********/
+
+    --fonte-principal:"Abel", sans-serif;
+    --fonte-secundaria:"League Spartan", sans-serif;
+}
+
+/******** body da pagina principal *********/
+
+body
+{
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: grid;
+    grid-template-areas: "h"
+                         "m"
+                         "f";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 170rem 15rem;
+
+    overflow: hidden;
+    overflow-y: auto;
+
+    background-color: var(--cor-preto);
+    
+}
+
+    /******** estilo da barra de rolagem *********/
+
+    ::-webkit-scrollbar-track {
+        background-color: #464646;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #000000;
+    }
+
+    /******** header *********/
+
+    header
+    {
+        grid-area: h;
+
+        background-color: var(--cor-preto);
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+        .logo
+        {
+            height: 3.5rem;
+            width: 3.5rem;
+
+            border-radius: 50%;
+            border: 1px solid white;
+
+            background-color: gray;
+        }
+        .navegacao
+        {
+            height: auto;
+            width: auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+
+            margin-left: 8rem;
+        }
+        .navegacao h2
+        {
+            font-size: medium;
+            font-family: var(--fonte-secundaria);
+            font-weight: 400;
+            font-style: normal;
+
+            color: white;
+
+        }
+        .navegacao h2:hover
+        {
+            
+            color: var(--cor-verde_cana);
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+        
+        .login
+        {
+            height: auto;
+            width: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+            .box_login
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;  
+                gap: .5rem;  
+
+                padding: .5rem 2rem;
+
+                border-radius: 5px;
+
+                background-color: var(--cor-verde_cana);
+
+                cursor: pointer;
+            }
+                .box_login h2
+                {
+                    color: var(--cor-preto);
+                    font-family: var(--fonte-secundaria);
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: medium;
+                }
+                .box_login svg
+                {
+                    height: 1.5rem;
+                    width: 1.5rem;
+
+                    color: var(--cor-preto);
+
+                    cursor: pointer;
+                }
+
+    /******** main *********/
+
+    main
+    {
+        grid-area: m;
+
+        display: grid;
+        grid-template-areas: "slider"
+                             "duvidas"
+                             "recarga"
+                             "sobre"
+                             "contato";
+        grid-template-columns: 1fr;
+        grid-template-rows: 28rem 1.5fr 1.4fr 1.3fr 1.3fr;
+       
+    }
+
+        /******** area do slider *********/
+
+
+        .slider
+        {
+            grid-area: slider;
+
+            background-color: var(--cor-slider);
+
+            position: relative;
+
+            margin: 0 auto;
+             
+            overflow: hidden;
+        }
+            .slides
+            {
+                height: 100%;
+                width: 200%;
+
+                display: flex;
+            }
+                .slides input
+                {
+                    display: none;
+                }
+            
+            .slide
+            {
+                width: 100%;
+                position: relative;
+
+            }
+                .img_slider1
+                {
+                    height: 100%;
+                    width: 100vw;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-image: url(./imagens/propaganda/propaganda1.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                    .img_slider1 svg
+                    {
+                        color: white;
+                    }
+                .img_slider2
+                {
+                    height: 100%;
+                    width: 100vw;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-image: url(./imagens/propaganda/propaganda2.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                    .img_slider2 svg
+                    {
+                        color: white;
+                    }
+                
+            .manual-navegation
+            {
+                position: absolute;
+                bottom: 1.5rem;
+
+                width:auto;
+                display: flex;
+                gap: 1rem;
+
+                margin-left: 24%;
+
+            }
+            .manual-btn
+            {
+                border: 2px solid white;
+                padding: 5px;
+                border-radius: 50%;
+                
+                cursor: pointer;
+                transition: .5s;
+            }
+            .manual-btn:hover
+            {
+                background-color: white;
+            }
+
+            #radio1:checked ~ .first
+            {
+                margin-left: 0;
+            }
+            #radio2:checked ~ .first
+            {
+                margin-left: -100%;
+            }
+        .navegation-auto
+        {
+            position: absolute;
+            bottom: 1.5rem;
+
+            width:auto;
+            display: flex;
+            gap: 1rem;
+
+            margin-left: 24%;
+
+        }
+            .navegation-auto div
+            {
+                border: 2px solid #20a6ff;
+                padding: 5px;
+                border-radius: 50%;
+
+                cursor: pointer;
+
+                transition: .5s;
+            }
+
+            #radio1:checked ~ .navegation-auto .auto-btn1
+            {
+                background-color: white;
+            }
+            #radio2:checked ~ .navegation-auto .auto-btn2
+            {
+                background-color: white;
+            }
+
+        /******** area dos tutoriais *********/
+
+        .tutorial
+        {
+            grid-area: duvidas;
+
+            position: relative;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: 3rem;
+
+            margin-top: 6.8rem;
+        }
+            .box_titulo_duvidas
+            {
+                height: auto;
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                text-align: start;
+
+            }
+                .titulos_areas_navegacao
+                {
+                    color: var(--cor-branca);
+                    font-family: var(--fonte-principal);
+
+                }
+                .titulos_areas_navegacao b
+                {
+                    color: var(--cor-verde_cana);
+    
+                }
+                .box_titulo_duvidas h2
+                {
+                    color: var(--cor-branca);
+                    font-family: var(--fonte-principal);
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: medium;
+                }
+
+            .box_principais_duvidas
+            {
+                height: auto;
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: end;
+                gap: 3px;
+
+            }
+                .duvida1
+                {
+                    height: 13rem;
+                    width: 17rem;
+
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    gap: 1rem;
+
+                    text-align: start;
+
+                    border-radius: 10px;
+
+                    background: linear-gradient(135deg,  #333 0%, #111 100%);
+                }
+                    .duvida1 h3
+                    {
+                        color: var(--cor-branca);
+
+                        font-family: var(--fonte-secundaria);
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: medium;
+
+                        margin-left: 20px;
+                    }
+                    .duvida1 h4
+                    {
+                        color: var(--cor-cinza);
+
+                        font-family: var(--fonte-principal);
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: small;
+
+                        margin-left: 20px;
+
+                    }
+                    .numero_pergunta1
+                    {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+
+                        color: var(--cor-verde_cana);
+                        font-family: var(--fonte-secundaria);
+                    }
+                .duvida2
+                {
+                    height: 15rem;
+                    width: 17rem;
+
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    gap: 1rem;
+
+                    text-align: start;
+
+                    border-radius: 10px;
+
+                    background-color: var(--cor-verde_cana);
+                }
+                    .duvida2 h3
+                    {
+                        color: var(--cor-preto);
+
+                        font-family: var(--fonte-secundaria);
+                        font-weight: 700;
+                        font-style: normal;
+                        font-size: medium;
+
+                        margin-left: 25px;
+                    }
+                    .duvida2 h4
+                    {
+                        color: var(--cor-preto);
+
+                        font-family: var(--fonte-principal);
+                        font-weight: 1000;
+                        font-style: normal;
+                        font-size: small;
+
+                        margin-left: 25px;
+
+                    }
+                    .duvida2 h5
+                    {
+                        color: var(--cor-preto);
+
+                        font-family: var(--fonte-principal);
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: small;
+
+                        margin-left: 25px;
+
+                        cursor: pointer;
+                    }
+                    .numero_pergunta2
+                    {
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+
+                        color: var(--cor-preto);
+                        font-family: var(--fonte-secundaria);
+
+                    }
+                
+            
+        /******** area das recargas *********/
+
+        .recarga
+        {
+            grid-area: recarga;
+
+            position: relative;
+
+            background-color: var(--cor-recarga);
+
+            display: flex;
+            flex-direction: row;
+            justify-content:center;
+            align-items: start;
+            gap: 4rem;
+
+            margin-top: .9rem;
+
+        }
+
+        .cartas_container {
+            height: 70%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+        
+            .carrossel_cartas {
+                position: relative;
+                height: auto;
+                width: auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transform-style: preserve-3d; 
+                transform: rotateX(90deg);
+                transform-origin: bottom;
+
+            }
+            .carrossel_cartas::before{
+                content: "";
+                position: absolute;
+                height: 20rem;
+                width: 20rem;
+
+                transform-style: preserve-3d;
+                transform-origin: center;
+                
+                border-radius: 50%;
+
+                background-color: rgba(99, 248, 0, 0.527);
+                filter: blur(90px);
+
+            }
+            .base_carrossel
+            {
+                position: absolute;
+                position: relative;
+                height: 20rem;
+                width: 20rem;
+                perspective: 10000px;
+                transform-style: preserve-3d;
+                transform-origin: center;
+                
+                border-radius: 50%;
+            }
+        
+            .carta1_carrossel,
+            .carta2_carrossel,
+            .carta3_carrossel {
+                position: absolute;
+                height: 16rem;
+                width: 11rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform-origin: bottom;
+                transform: rotateX(-90deg);
+                cursor:grab;
+                filter: contrast(150%);
+                
+            }
+        
+                
+                .carta1_carrossel {
+                    top: -15rem;
+                    right: -5rem;
+                    background-image: url(imagens/cartas/carta_xbox_Prancheta\ EBOX.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;                    
+                }
+                .carta2_carrossel {
+                    bottom: 0;
+                    left:4.5rem;
+                    background-image: url(imagens/cartas/carta_xbox_Prancheta\ PLAYSTATION.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .carta3_carrossel {
+                    top: -15rem;
+                    left: -5rem;
+                    background-image: url(imagens/cartas/carta_xbox_Prancheta\ PC.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                    
+        
+        .cartas_txt_box
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: start;
+            gap: 2rem;
+
+            text-align: start;
+        }
+            .detalhe
+            {
+                height: auto;
+                width: auto;
+                color: var(--cor-branca);
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                font-size: 10rem;
+
+            }
+                .detalhe_bolinha
+                {
+                    height: 1rem;
+                    width: 1rem;
+
+                    border-radius: 50%;
+
+                    background-color: var(--cor-branca);
+                }
+            .recargaa_txt
+            {
+                color: var(--cor-branca);
+                font-family: var(--fonte-principal);
+                font-weight: 400;
+                font-style: normal;
+            }
+            .recargaa_txt b
+            {
+                color: var(--cor-cinza-escuro);
+            }
+            .bt_pagina_compra
+            {
+                height: auto;
+                width: auto;
+
+                padding: 1rem 3rem;
+
+                background-color: var(--cor-verde_cana);
+                color: var(--cor-preto);
+
+                font-size: medium;
+                font-family: var(--fonte-secundaria);
+                font-weight: 600;
+                font-style: normal;
+                text-align: center;
+                
+
+                text-decoration: none;
+
+                border: none;
+                border-radius: 10px;
+
+                cursor: pointer;
+            }
+            
+        /******** area de exibição de serviços *********/
+
+        .servicos
+        {
+            grid-area: sobre;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items: center;
+            gap: 1rem;
+            
+            
+        }
+            .txt_sobre
+            {
+                color: var(--cor-cinza);
+                font-family: var(--fonte-principal);
+                font-weight: 400;
+                font-style: normal;
+                font-size: medium;
+                text-align: center;
+            }
+            .box_info_sobre
+            {
+                height: auto;
+                width: 100%;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: end;
+                gap: 1rem;
+
+                margin-top: 1rem;
+            }
+                .box_sobre1
+                {
+                    height: 17rem;
+                    width: 15rem;
+
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 1.5rem;
+
+                    text-align: center;
+
+                    border-radius: 10px;
+
+                    background: linear-gradient(135deg,  #333 0%, #111 100%);
+                }
+                .box_sobre2
+                {
+                    height: 20rem;
+                    width: 15rem;
+
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 1.5rem;
+
+                    text-align: center;
+
+                    border-radius: 10px;
+
+                    background-color: var(--cor-verde_cana);
+                }
+                    .circulo_icone_sobre
+                    {
+                        height: 4rem;
+                        width: 4rem;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        background-color: var(--cor-verde_cana);
+
+                        border-radius: 50%;
+
+                        margin-top: 2rem;
+                    }
+                        .circulo_icone_sobre img
+                        {
+                            height: 8rem;
+                            width: 8rem;
+                        }
+                        .circulo_icone_sobre2 img
+                        {
+                            height: 8rem;
+                            width: 8rem;
+
+                        }
+                    .circulo_icone_sobre2
+                    {
+                        height: 4rem;
+                        width: 4rem;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        background-color: var(--cor-preto);
+
+                        border-radius: 50%;
+
+                        margin-top: 2rem;
+                    }
+                        .box_sobre1 h3
+                        {
+                            color: var(--cor-branca);
+                            font-family: var(--fonte-secundaria);
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: medium;
+
+                            margin-top: .5rem;
+                        }
+                        .box_sobre1 h4
+                        {
+                            color: var(--cor-cinza);
+                            font-family: var(--fonte-secundaria);
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: small;
+
+                        }
+                        .box_sobre2 h3
+                        {
+                            color: var(--cor-preto);
+                            font-family: var(--fonte-secundaria);
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: medium;
+
+                            margin-top: .5rem;
+                        }
+                        .box_sobre2 h4
+                        {
+                            color: var(--cor-cinza-escuro);
+                            font-family: var(--fonte-secundaria);
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: small;
+
+                        }
+                        .bt_ler_mais
+                        {
+                            height: auto;
+                            width: auto;
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: .5rem;
+
+                            background-color: var(--cor-preto);
+                            color: var(--cor-verde_cana);
+
+                            font-family: var(--fonte-principal);
+
+                            border-radius: 5px;
+
+                            padding: .5rem 3.5rem;
+
+                            text-decoration: none;
+                            text-align: center;
+                        }
+                        .bt_ler_mais svg
+                        {
+                            height: 1rem;
+                            width: 1rem;
+
+                            margin-top: 5px;
+                            color: var(--cor-verde_cana);
+                        }
+
+        /******** area dos contato *********/
+
+        .contato
+        {
+            grid-area: contato;
+
+            position: relative;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            gap: 2rem;
+
+            margin-top: 5em;
+
+        }
+            .contatos_container
+            {
+                height: auto;
+                width: 50%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+            }
+                .detalhe_contato
+                {
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1.5rem;
+
+                    margin-right: .5rem;
+
+                }
+                    .detalhe_tracinho
+                    {
+                        height: 3rem;
+                        width: 5px;
+
+                        background-color: var(--cor-cinza);
+                    }
+                    .detalhe_contato h4
+                    {
+                        color: var(--cor-cinza);
+                        font-family: var(--fonte-principal);
+                        font-weight: 400;
+                        font-style: normal;
+                        font-size: medium;
+                        text-align: start;
+
+                    }
+                .box_icones_contato
+                {
+                    height: auto;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    align-items: center;
+                    gap: 1rem;
+
+                }
+                    .box_icones_circulos
+                    {
+                        height: auto;
+                        width: auto;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        align-items: start;
+                        gap: 1rem;
+                    }
+                    .box_contatos
+                    {
+                        height: auto;
+                        width: auto;
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1.5rem;
+                    }
+                        .icone_circulo
+                        {
+                            height: 3rem;
+                            width: 3rem;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            background-color: var(--cor-verde_cana);
+
+                            border-radius: 50%;
+                        }
+                       
+                            .icone_circulo img
+                            {
+                                height: 6rem;
+                                width: 6rem;
+                            }
+                        .icone_txt
+                        {
+                            height: auto;
+                            width: auto;
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: start;
+                            gap: .5rem;
+                        }
+                            .icone_txt h3
+                            {
+                                color: var(--cor-branca);
+                                font-family: var(--fonte-secundaria);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: medium;
+                                text-align: start;
+                            }
+                            .icone_txt h4
+                            {
+                                color: var(--cor-cinza-escuro);
+                                font-family: var(--fonte-principal);
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: medium;
+                                text-align: start;
+                            }
+
+
+
+            .imagem_contato
+            {
+                height: 70%;
+                width: 40%;
+
+                background-color: rgb(46, 46, 46);
+            }
+    /******** footer *********/
+
+    footer
+    {
+        grid-area: f;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        border-top: 2px solid var(--cor-cinza);
+
+        background-color: var(--cor-preto);
+    }
+    .alinha_footer
+    {
+        height: auto;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+        .container_redes_sociais
+        {
+            height: auto;
+            width: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: .5rem;
+
+            text-align: start;
+        }
+            .logo_footer
+            {
+                font-family: var(--fonte-principal);
+                font-style: normal;
+                font-weight: 1000;
+                font-size:2.5rem;
+                color: var(--cor-verde_cana);
+                
+            }
+            .container_redes_sociais h3
+            {
+                font-family: var(--fonte-secundaria);
+                font-style: normal;
+                font-weight: 600;
+                line-height: 1.5;
+                font-size:10px;
+                color: var(--cor-branca);
+            }
+            .box_icones_footer
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+                .circulo_icone_footer
+                {
+                    height: 2.5rem;
+                    width: 2.5rem;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background-color: var(--cor-verde_cana);
+
+                    border-radius: 50%;
+
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                    .circulo_icone_footer svg
+                    {
+                        height: 1.5rem;
+                        width: 1.5rem;
+
+                        text-decoration: none;
+
+                        color: var(--cor-preto);
+
+                    }
+                    .circulo_icone_footer img
+                    {
+                        height: 3rem;
+                        width: 3rem;
+
+                        text-decoration: none;
+
+                    }
+                    
+        .container_footer
+        {
+            height: auto;
+            width: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            .container_footer ul
+            {
+                
+                color: var(--cor-branca);
+
+                font-family: var(--fonte-secundaria);
+
+                list-style: none;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 5px;
+
+            }
+                .container_footer ul li
+                {
+                    
+                    color: var(--cor-cinza-escuro);
+    
+                    font-family: var(--fonte-secundaria);
+                    font-size: small;
+    
+                    list-style: none;
+    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    gap: 5px;
+                }
+                .container_footer ul li:hover
+                {  
+                    color: var(--cor-branca);
+
+                    cursor: pointer;
+                    transition: .5s;
+                }
+        .container_Agradecimentos
+        {
+            height: auto;
+            width: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 5px;
+        }
+            .container_Agradecimentos h3
+            {
+                color: var(--cor-branca);
+
+                font-family: var(--fonte-secundaria);
+                font-weight: 400;
+                font-style: normal;
+                font-size: medium;
+            }
+                .bts_footer
+                {
+                    height: auto;
+                    width: auto;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    margin-top: .5rem;
+
+                }
+                    .logoff
+                    {
+                        color: var(--cor-cinza-escuro);
+
+                        font-family: var(--fonte-secundaria);
+                        font-weight: 600;
+                        font-size: medium;
+
+                        padding: .8rem;
+
+                        border: 1px solid var(--cor-branca);
+                        border-right: none;
+                        border-radius: 10px 0 0 10px;
+
+                        cursor: pointer;
+                    }
+                    .Voltar_topo
+                    {
+                        background-color: var(--cor-verde_cana);
+                        color: var(--cor-preto);
+
+                        font-family: var(--fonte-secundaria);
+                        font-weight: 600;
+                        font-size: medium;
+
+                        padding: .8rem;
+
+                        border: 1px solid var(--cor-verde_cana);
+                        border-radius: 0 10px 10px 0;
+
+                        cursor: pointer;
+                    }
+                .container_Agradecimentos h4
+                {
+                    color: var(--cor-branca);
+    
+                    font-family: var(--fonte-secundaria);
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: medium;
+
+                    text-align: start;
+
+                    margin-top: .5rem;
+                }
+                .container_Agradecimentos b
+                {
+                    color: var(--cor-verde_cana);
+
+                }
+    
+    footer::after
+    {
+        content:"@ venda de moedas-2024";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        padding: 4px;
+
+        background-color: black;
+
+        width: 100%;
+        height: 1rem;
+
+        color: var(--cor-cinza);
+
+        text-align: center;
+
+        font-family: var(--fonte-secundaria);
+        font-size: 12px;
+        
+    }
+
+

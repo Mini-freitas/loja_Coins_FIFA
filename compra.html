@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>venda de moedas</title>
+
+    <link rel="stylesheet" href="compra.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <nav class="navegacao">
+            <h2 onclick="scrollToElement('titulo_menu')">Menu</h2>
+            <h2 onclick="scrollToElement('titulo_duvidas')">Tutorial</h2>
+            <h2 onclick="scrollToElement('titulo_recarga')">Recarga</h2>
+            <h2 onclick="scrollToElement('titulo_calculadora')">Calculadora</h2>
+            <h2 onclick="scrollToElement('titulo_contato')">Contato</h2>
+        </nav>
+        <div class="login">
+            <div class="box_login">
+                <h2>ENTRAR</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+                    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>  
+            </div>       
+        </div>
+    </header>
+    <main>
+        <div class="slider" id="titulo_menu">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+
+                <div class="slide first">
+                    <div class="img_slider1">
+                        
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img_slider2">
+                        
+                    </div>
+                </div>
+
+                <div class="navegation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                </div>
+            </div>
+            <div class="manual-navegation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+            </div>
+        </div>
+        <div class="tutorial">
+            <div class="box_titulo_tutorial">
+                <h1 class="titulos_areas_navegacao" id="titulo_duvidas">
+                    SIGA O <b>TUTORIAL</b> DE COMPRA E APROVEITE
+                </h1>
+            </div>
+            <div class="box_img_tutorial">
+                <div class="img_tutorial">
+                    <img src="imagens/icones/icone_tutorial_compra.svg" alt="imagem de tutorial de compra">
+                </div>
+                <div class="container_tutorial">
+                    <h2>
+                        É muito simples realizar sua compra, siga o <br>
+                        <b>tutorial explicativo</b>, em três passos você finaliza <br>
+                        sua compra. 
+                    </h2>
+                    <h2>
+                        Lembre-se de que a recarga é feita apenas por <br> 
+                        <b>método automatico</b>, ou seja, ao realizar sua compra <br>
+                        o processo de transferência se inicia.
+                    </h2>
+                    <div class="box_bt_tutorial">
+                        <div class="bt_ir_a_compra" onclick="scrollToElement('titulo_recarga')">
+                            COMPRAR AGORA
+                        </div>
+                        <div class="bt_ir_a_calculadora" onclick="scrollToElement('titulo_calculadora')">
+                            VER CALCULADORA
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>   
+        <div class="recarga" id="titulo_recarga">
+            <div class="box_titulo_tutorial">
+                <h1 class="titulos_areas_navegacao" id="titulo_duvidas">
+                    SELECIONE A <b>CARTA</b> COM A OPÇÃO DE RECARGA DESEJADA
+                </h1>
+            </div>
+            <h2>
+                Selecione a carta que deseja comprar, caso selecione e deseje mudar basta clicar novamente em outra carta e a <br>
+                seleção antiga será deletada
+            </h2>
+            <div class="container_cartas_recarga">
+                <div class="carta1"></div>
+                <div class="carta2"></div>
+                <div class="carta3"></div>
+            </div>
+
+
+        </div>    
+        <div class="calculadora" id="titulo_calculadora">
+            <div class="box_titulo_tutorial">
+                <h1 class="titulos_areas_navegacao" id="titulo_duvidas">
+                    ESCOLHA A <b>QUANTIDADE</b> DE MOEDAS QUE DESEJA <br>
+                    RECARREGAR
+                </h1>
+            </div>
+            <div class="container_calculadora">
+                <div class="box_carta_range">
+                    <div class="carta_saida_valores">
+
+                    </div>
+                    <div class="box_range_calcula">
+                        <label for="rangeInput" class="rangeLabel">
+                            <div class="thumb"></div>
+                            <div><h2>2k</h2></div>
+                            <div><h2>100k</h2></div>
+                            <div><h2>200k</h2></div>
+                            <div><h2>300k</h2></div>
+                            <div><h2>500k</h2></div>
+                            <div><h2>2kk</h2></div>
+                            <div><h2>5kk</h2></div>
+                            <div><h2>7kk</h2></div>
+                            <div><h2>10kk</h2></div>
+                        </label>
+                        <input type="range" id="rangeInput" min="1" max="10000000" step="1" class="hiddenRange" hidden>
+                    </div>
+                </div>
+                <div class="box_valores">
+                    <div class="auto_titulo">Automático</div>
+                    <div class="moedas_recebidas">
+                        <h2>Você receberá</h2>
+                        <p id="out_quant_moedas">2.000.000</p>
+                    </div>
+                    <div class="desconto_box">
+                        <p id="quant_desconto"></p>
+                        <p id="preco_real"></p>
+                    </div>
+                    <div class="total_pagamento">
+                        <h2>Total a pagar</h2>
+                        <p id="out_pagamento">R$<b></b></p>
+                    </div>
+
+                    <div class="economia">
+                        <h2>Economize</h2>
+                        <p id="out_economia"></p>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+            <h3>
+                Ao clicar em continuar você está confirmando o valor selecionado
+            </h3>
+            <div class="bt_continua_compra">
+                CONTINUAR
+            </div>
+        </div>        
+        <div class="contato">
+
+            <div class="contatos_container">
+                <h1 class="titulos_areas_navegacao" id="titulo_contato">
+                    ENTRE EM <b>CONTATO</b> COM A NOSSA <br>
+                    EQUIPE
+                </h1>
+                <div class="detalhe_contato">
+                    <div class="detalhe_tracinho"></div>
+                    <h4>
+                        Nossa equipe está 24h a sua diposição, entre em contato para <br>
+                        resolver qualquer problema ou tirar qualquer dúvida
+                    </h4>
+                </div>
+                <div class="box_icones_contato">
+                    <div class="box_icones_circulos">
+                        <div class="box_contatos">
+                            <div class="icone_circulo">
+                                <img src="imagens/icones/svg_icone_email.svg" alt="">
+                            </div>
+                            <div class="icone_txt">
+                                <h3>Entre em contato por Email</h3>
+                                <h4>vendademoedas@gmail.com</h4>
+                            </div>
+                        </div>
+                        <div class="box_contatos">
+                            <div class="icone_circulo">
+                                <img src="imagens/icones/svg-icone_telefone.svg" alt="">
+                            </div>
+                            <div class="icone_txt">
+                                <h3>Entre em contato por whatsapp</h3>
+                                <h4>(27)99965-1855</h4>
+                            </div>
+                        </div>
+                        
+                    </div>  
+                    <div class="box_icones_circulos">
+                        <div class="box_contatos">
+                            <div class="icone_circulo">
+                                <img src="imagens/icones/svg-icone_telefone.svg" alt="">
+                            </div>
+                            <div class="icone_txt">
+                                <h3>Entre em contato por telefone</h3>
+                                <h4>(27)99965-1855</h4>
+                            </div>
+                        </div>
+                        <div class="box_contatos">
+                            <div class="icone_circulo">
+                                <img src="imagens/icones/svg_icone_local.svg" alt="">
+                            </div>
+                            <div class="icone_txt">
+                                <h3>Conheça a sede empresarial</h3>
+                                <h4>Bairro Itararé Vitória ES</h4>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </div>
+            <div class="imagem_contato"></div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="alinha_footer">
+            <div class="container_redes_sociais">
+                <div class="logo_footer">GIFTSHOP</div>
+                <h3>
+                    SIGA NOSSAS REDES SOCIAIS E FIQUE <br>
+                    POR DENTRO DE TODAS AS NOVIDADES
+                </h3>
+                <div class="box_icones_footer">
+                    <a href="" class="circulo_icone_footer">
+                        <img src="imagens/icones/svg_icone_facebook.svg" alt="Icone Facebook">
+                    </a>
+                    <a href="" class="circulo_icone_footer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                    </a>
+                    <a href="" class="circulo_icone_footer">
+                        <img src="imagens/icones/svg_icone_youtoobe.svg" alt="Icone Youtoobe">
+                    </a>
+                </div>
+            </div>
+            <div class="container_footer">
+                <ul> Navegação
+                    <li>Menu</li>
+                    <li>Principais duvidas</li>
+                    <li>Recarga</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
+            <div class="container_footer">
+                <ul> Funcionamento
+                    <li>Plataforma automática</li>
+                    <li>Compra 24 horas</li>
+                    <li>Atendimento horario comercial</li>
+                    <li>Principais duvidas</li>
+                </ul>
+            </div>
+            <div class="container_footer">
+                <ul> Fale conosco
+                    <li>Menu</li>
+                    <li>Principais duvidas</li>
+                    <li>Recarga</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
+            <div class="container_Agradecimentos">
+                <h3>
+                    Agradecimentos
+                </h3>
+                <div class="bts_footer">
+                    <div class="logoff">Sair da conta</div>
+                    <div class="Voltar_topo">Voltar ao topo</div>
+                </div>
+                <h4>
+                    A <b>GIFTSHOP</b> agradece por sua <br>
+                    preferência,você é sempre bem-vindo
+                </h4>
+    
+            </div>
+        </div>
+         
+    </footer>
+
+<script src="principal.js"></script>
+<script src="calculadora.js"></script>
+
+</body>
+</html>
